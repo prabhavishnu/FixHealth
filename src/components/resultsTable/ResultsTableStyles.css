@@ -1,0 +1,11 @@
+.results_table_select_btn {
+  background-color: #8971a8;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+}
+
+.results_table_select_btn:hover {
+  background-color: #b386ec;
+}

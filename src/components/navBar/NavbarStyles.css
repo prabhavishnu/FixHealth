@@ -1,0 +1,17 @@
+.navbar_logo {
+  width: 15vw;
+}
+.fixhealth_navbar .nav-link {
+  color: white;
+  font-size: 18px;
+}
+.fixhealth_navbar {
+  background-color: black;
+}
+.navbar_booknow_btn {
+  color: black;
+  background-color: #c1cdef;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 18px;
+}

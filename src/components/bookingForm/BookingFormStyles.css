@@ -1,0 +1,61 @@
+.form-label {
+  color: white;
+  font-weight: 800;
+}
+.form-control {
+  color: white;
+  width: 35vw;
+  background-color: rgb(45, 41, 41);
+}
+input:focus {
+  background-color: #333;
+}
+input::placeholder {
+  color: #797676 !important;
+}
+.go433304200:before,
+.go3842760039:before {
+  background-color: #b286ecc8;
+}
+.form_input_container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.form_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.booking_review {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 80px;
+}
+.booking_form_next_btn,
+.booking_form_back_btn {
+  width: 7vw;
+  height: 4vh;
+  border-radius: 7px;
+  background-color: #b386ec;
+  border: none;
+  margin: 5px;
+}
+
+.booking_form_back_btn {
+  background-color: rgb(209, 209, 209);
+}
+
+.booking_form_footer_buttons_std {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.form-check {
+  margin: 10px 0;
+}
+.form-check label {
+  color: white;
+}
