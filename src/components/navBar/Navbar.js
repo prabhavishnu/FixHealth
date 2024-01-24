@@ -2,6 +2,12 @@ import React, { Component } from "react";
 import logo from "../../assets/LogoImg.png";
 import "./NavbarStyles.css";
 export default class Navbar extends Component {
+  scrollToBookNow = () => {
+    window.scroll({
+      top: 1450,
+      behavior: "smooth",
+    });
+  };
   render() {
     return (
       <nav class="navbar navbar-expand-lg fixhealth_navbar">
@@ -43,7 +49,12 @@ export default class Navbar extends Component {
                 </a>
               </li>
             </ul>
-            <span class="navbar-text navbar_booknow_btn">Book Now</span>
+            <button
+              onClick={() => this.scrollToBookNow()}
+              class="navbar-text navbar_booknow_btn"
+            >
+              Book Now
+            </button>
           </div>
         </div>
       </nav>
