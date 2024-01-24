@@ -12,7 +12,7 @@ export default class BookingForm extends Component {
     company: "",
     city: "",
     complaint: "",
-    currentstep: 4,
+    currentstep: 0,
     results: [],
     prevExperience: false,
   };
