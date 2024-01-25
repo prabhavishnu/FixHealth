@@ -3,10 +3,24 @@ import "./ResultsTableStyles.css";
 
 export default class ResultsTable extends Component {
   state = {
+    specializations: [
+      "Back and Neck Pain",
+      "Knee and Ankle Pain",
+      "Should and Elbow Pain",
+      "Neurological",
+      "Sports Injury",
+    ],
     selectedDoctor: {},
   };
+
+  getRandomSpecialization = () => {
+    const list = this.state.specializations;
+    return list[Math.floor(Math.random() * list.length)];
+  };
+
   render() {
-    const { data = [], city = "" } = this.props;
+    const { data = [], city = "Bangalore" } = this.props;
+    console.log({ data });
     return (
       <div>
         <div className="modal_confirmation">
@@ -59,26 +73,36 @@ export default class ResultsTable extends Component {
         </div>
         <table class="table table-dark">
           <thead>
-            <tr>
-              <th scope="col"></th>
-              <th scope="col">Name</th>
-              <th scope="col">Gender</th>
-              <th scope="col">City</th>
-              <th scope="col">Contact</th>
-              <th scope="col"></th>
+            <tr className="text-start">
+              <th>Doctor</th>
+              <th>Expertise</th>
+              <th>City</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
-            {data.map((doctor, idx) => (
-              <tr className="align-middle">
-                <th scope="row">{idx + 1}</th>
-                <td>
-                  {doctor.name.title} {doctor.name.first} {doctor.name.last}
+            {data.map((doctor) => (
+              <tr className="doctors_list_item">
+                <td className="text-start">
+                  <div className="d-flex justify-content-between">
+                    <div className="d-flex">
+                      <img src={doctor.picture.thumbnail} />
+                      <div className="doctors_list_item_name">
+                        <p>
+                          {"Dr. "} {doctor.name.first} {doctor.name.last}
+                        </p>
+                        <small>
+                          Experience: {parseInt(doctor.dob.age / 3)}+ years
+                        </small>
+                      </div>
+                    </div>
+                  </div>
                 </td>
-                <td>{doctor.gender}</td>
-                <td>{city}</td>
-                <td>{doctor.phone}</td>
-                <td>
+                <td className="text-start doctors_list_item_field">
+                  {this.getRandomSpecialization()}
+                </td>
+                <td className="text-start">Bangalore</td>
+                <td className="text-start">
                   <button
                     className="results_table_select_btn"
                     data-toggle="modal"

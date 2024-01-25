@@ -9,3 +9,31 @@
 .results_table_select_btn:hover {
   background-color: #b386ec;
 }
+.doctors_list_item {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.doctors_list_item img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 30px;
+}
+
+.doctors_list_item_name{
+  width: max-content
+}
+
+.doctors_list_item_name p{
+  margin:0
+}
+
+.doctors_list_item_name small{
+  font-style: italic;
+  color: gray
+}
+
+.doctors_list_item_field{
+  font-size: 14px;
+}

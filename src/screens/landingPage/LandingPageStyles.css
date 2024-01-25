@@ -63,3 +63,14 @@
   padding: 60px;
   justify-content: space-around;
 }
+
+.hero_image_stats_div {
+  color: rgb(189, 172, 190);
+  font-weight: bolder;
+  background-color: rgb(20, 20, 20);
+  padding: 40px;
+}
+
+.hero_image_stats_div h3 {
+  font-weight: bold;
+}

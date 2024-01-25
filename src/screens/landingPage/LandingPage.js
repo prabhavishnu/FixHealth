@@ -7,6 +7,7 @@ import consultImg from "../../assets/consult.png";
 import diagImg from "../../assets/diag.png";
 import monitorImg from "../../assets/monitor.png";
 import tretImg from "../../assets/treat.png";
+import heroImg from "../../assets/heroImg.png";
 import BookingForm from "../../components/bookingForm/BookingForm";
 import workImg from "../../assets/workImg.jpg";
 import Nishith from "../../assets/Nishith.webp";
@@ -22,10 +23,32 @@ export default class LandingPage extends Component {
       <div className="landing_page_main_bg">
         <Navbar />
         <img
-          src={bgImg}
+          src={heroImg}
           alt="background image"
           className="landing_page_background_img"
         />
+        <div className="hero_image_stats_div">
+          <div className="d-flex justify-content-around">
+            <div className="hero_image_stats_data">
+              <h1>
+                <strong>20000+</strong>
+              </h1>
+              <h5>Patients</h5>
+            </div>
+            <div className="hero_image_stats_data">
+              <h1>
+                <strong>1 Lakh+</strong>
+              </h1>
+              <h5>Sessions</h5>
+            </div>
+            <div className="hero_image_stats_data">
+              <h1>
+                <strong>9.6/10</strong>
+              </h1>
+              <h5>Rating</h5>
+            </div>
+          </div>
+        </div>
         <div className="landing_page_part2">
           <h3 className="landing_page_part2_h2">
             Expert Guidance at Your Fingertips
