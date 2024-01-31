@@ -48,8 +48,8 @@ export default class ResultsTable extends Component {
                   </button>
                 </div>
                 <div class="modal-body">
-                  Your Consultation with Dr.{" "}
-                  {this.state.selectedDoctor.name?.first} Confirmed!
+                  Your Consultation with Dr. {this.state.selectedDoctor?.name}{" "}
+                  Confirmed!
                 </div>
                 <div class="modal-footer">
                   <button
@@ -86,22 +86,20 @@ export default class ResultsTable extends Component {
                 <td className="text-start">
                   <div className="d-flex justify-content-between">
                     <div className="d-flex">
-                      <img src={doctor.picture.thumbnail} />
+                      <img src={doctor.photo} />
                       <div className="doctors_list_item_name">
                         <p>
-                          {"Dr. "} {doctor.name.first} {doctor.name.last}
+                          {"Dr. "} {doctor.name}
                         </p>
-                        <small>
-                          Experience: {parseInt(doctor.dob.age / 3)}+ years
-                        </small>
+                        <small>Experience: {doctor.experience}+ years</small>
                       </div>
                     </div>
                   </div>
                 </td>
                 <td className="text-start doctors_list_item_field">
-                  {this.getRandomSpecialization()}
+                  {doctor.specialisation}
                 </td>
-                <td className="text-start">Bangalore</td>
+                <td className="text-start">{doctor.city}</td>
                 <td className="text-start">
                   <button
                     className="results_table_select_btn"

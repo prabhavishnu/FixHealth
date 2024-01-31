@@ -3,7 +3,7 @@ import { Stepper } from "react-form-stepper";
 import "./BookingFormStyles.css";
 import axios from "axios";
 import ResultsTable from "../resultsTable/ResultsTable";
-
+// import "dotenv/config";
 export default class BookingForm extends Component {
   state = {
     name: "",
@@ -19,10 +19,11 @@ export default class BookingForm extends Component {
 
   getDoctorResults = async () => {
     try {
-      const { data: { results = [] } = {} } = await axios.get(
-        "https://randomuser.me/api/?results=5"
+      const results = await axios.get(
+        `https://main--subtle-dasik-41a586.netlify.app//.netlify/functions/api/doctors?city=${this.state.city}`
       );
-      this.setState({ results });
+      this.setState({ results: results.data });
+      console.log(results);
       this.incrementStep();
     } catch (error) {
       console.error(error);
