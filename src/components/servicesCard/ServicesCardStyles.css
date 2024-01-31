@@ -9,11 +9,6 @@
   padding: 20px;
 }
 
-.services_card:hover {
-  width: 24vw;
-  height: 34vh;
-  background-color: rgb(37, 36, 36);
-}
 .services_card .card-img-top {
   width: 35%;
   height: 48%;
